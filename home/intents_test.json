@@ -1,0 +1,41 @@
+{
+    "intents": [{
+            "tag": "Chào hỏi",
+            "patterns": ["Hello", "Xin chào", "Chào bạn"],
+            "responses": ["Chào bạn", "Xin chào! Tôi có thể giúp gì cho bạn"]
+        },
+        {
+            "tag": "Sức khoẻ",
+            "patterns": ["Bạn khoẻ không", "Bạn ổn chứ", "Bạn cảm thấy thế nào"],
+            "responses": ["Tôi cảm thấy rất tốt", "Tôi đang rất vui"]
+        },
+        {
+            "tag": "Tên",
+            "patterns": ["Bạn tên gì", "Bạn là ai", "Cho tôi biết tên của bạn"],
+            "responses": ["Tôi là trợ lý ảo Google", "Bạn có thể gọi tôi bằng Siri", "Siri"]
+        },
+        {
+            "tag": "Tạm biệt",
+            "patterns": ["Bye", "Hẹn gặp lại", "Gặp lại sau nhé", "tạm biệt"],
+            "responses": ["Tạm biệt bạn"]
+        },
+        {
+            "tag": "Mở Youtube",
+            "patterns": ["Mở Youtube", "Bật Youtube"]
+        },
+        {
+            "tag": "Mở Google",
+            "patterns": ["Mở Google", "Bật Google"]
+        },
+        {
+            "tag": "Mấy giờ",
+            "patterns": ["Mấy giờ rồi", "hiện tại mấy giờ", "Thời gian hiện tại"]
+        },
+        {
+            "tag": "ngày tháng năm",
+            "patterns": ["Hôm nay ngày mấy", "Tôi muốn biết hôm nay ngày mấy"]
+        }
+
+
+    ]
+}

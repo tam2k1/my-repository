@@ -1,0 +1,1 @@
+web gunicorn MYPYTHONWEB.wsgi:application --log-file -
