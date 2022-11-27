@@ -24,3 +24,4 @@ fastjsonschema==2.15.3
 jsonschema==4.4.0
 tensorflow-cpu
 SpeechRecognition==3.8.1
+wolframalpha==5.0.0
