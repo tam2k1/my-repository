@@ -4,6 +4,7 @@ from .main import GenericAssistant
 from .voice_assistant import *
 from django.http import HttpResponse
 import os 
+import time
 
 jsondir_url = os.getcwd() + "/home/intents_test.json"
 assistant = GenericAssistant(jsondir_url, intent_methods = mapping)
@@ -12,10 +13,6 @@ assistant.load_model('MyAssistanModel')
 def start(requests):
     return render(requests, 'index.html')
 def userCommand(requests):
-    # data = takeCommand()
-    # print(data[0])
-    # print(data[1])
-    # while True:
     path = os.getcwd()
     name = "output.mp3"
     for root, dirs, files in os.walk(path):
@@ -27,6 +24,7 @@ def userCommand(requests):
             recognizer.adjust_for_ambient_noise(mic, duration=0.2)
             audio = recognizer.listen(mic)         
             message = recognizer.recognize_google(audio, language="vi-VI")
+            time.sleep(3)
             message = message.lower()
             print("Bạn vừa nói: " + message)
         response = assistant.request(message)
