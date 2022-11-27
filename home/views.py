@@ -5,7 +5,7 @@ from .voice_assistant import *
 from django.http import HttpResponse
 import os 
 
-jsondir_url = os.getcwd() + "\home\intents_test.json"
+jsondir_url = os.getcwd() + "/home/intents_test.json"
 assistant = GenericAssistant(jsondir_url, intent_methods = mapping)
 assistant.load_model('MyAssistanModel')
 
