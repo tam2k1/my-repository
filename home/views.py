@@ -18,15 +18,14 @@ def userCommand(requests):
     for root, dirs, files in os.walk(path):
         if name in files:
             os.remove("output.mp3")
-    try:
-        with speech_recognition.Microphone() as mic:
-            print("Đang nghe...")
-            recognizer.adjust_for_ambient_noise(mic, duration=2)
-            audio = recognizer.listen(mic) 
-            time.sleep(3)
-            message = recognizer.recognize_google(audio, language="vi-VI")
-            message = message.lower()
-            print("Bạn vừa nói: " + message)
+    with speech_recognition.Microphone() as mic:
+        print("Đang nghe...")
+        recognizer.adjust_for_ambient_noise(mic, duration=2)
+        audio = recognizer.listen(mic) 
+    try:    
+        message = recognizer.recognize_google(audio, language="vi-VI")
+        message = message.lower()
+        print("Bạn vừa nói: " + message)
         response = assistant.request(message)
     except Exception:   #in any case of On Internet
         message = "Mời bạn nhắc lại"
