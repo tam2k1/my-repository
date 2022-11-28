@@ -22,9 +22,9 @@ def userCommand(requests):
         with speech_recognition.Microphone() as mic:
             print("Đang nghe...")
             recognizer.adjust_for_ambient_noise(mic, duration=2)
-            audio = recognizer.listen(mic)         
-            message = recognizer.recognize_google(audio, language="vi-VI")
+            audio = recognizer.listen(mic) 
             time.sleep(3)
+            message = recognizer.recognize_google(audio, language="vi-VI")
             message = message.lower()
             print("Bạn vừa nói: " + message)
         response = assistant.request(message)
