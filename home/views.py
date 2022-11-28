@@ -20,7 +20,7 @@ def userCommand(requests):
             os.remove("output.mp3")
     with speech_recognition.Microphone() as mic:
         print("Đang nghe...")
-        recognizer.adjust_for_ambient_noise(mic, duration=2)
+        recognizer.adjust_for_ambient_noise(mic, duration=0.2)
         audio = recognizer.listen(mic) 
     try:    
         message = recognizer.recognize_google(audio, language="vi-VI")
