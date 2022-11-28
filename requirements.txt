@@ -26,5 +26,5 @@ tensorflow-cpu
 SpeechRecognition==3.8.1
 wolframalpha==5.0.0
 toml==0.10.2
-pyproject.toml-based
+pyproject.toml
 PyAudio==0.2.12
