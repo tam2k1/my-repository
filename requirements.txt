@@ -25,4 +25,5 @@ jsonschema==4.4.0
 tensorflow-cpu
 SpeechRecognition==3.8.1
 wolframalpha==5.0.0
+pyproject-toml
 PyAudio==0.2.12
